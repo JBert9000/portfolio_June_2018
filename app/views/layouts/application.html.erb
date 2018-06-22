@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>John Bertlik - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <header is="main-navigation" class="clearfix">
+      <a href="#" class="name">John Bertlik</a>
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Projects</a>
+        <a href="#">Interests</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    ......
+
+    <div class="wrapper wrapper_padding clearfix">
+      <div class="col-1 about homepage_content">
+        <h2>About</h2>
+        <hr>
+        <p>I'm a guy making a website right now.</p>
+        <p>This will be filled out later. Here is a <a href="#">product</a> I've been working on.</p>
+      </div>
+
+      <div class="col-2 homepage_content">
+        <h2>Latest Blog Post</h2>
+        <hr>
+        <h3>Blog Post title goes here</h3>
+        <p class="date">Sunday June 17th 2018</p>
+        <p>This will be filled out later.</p>
+        <h3>Blog Post title goes here</h3>
+        <p class="date">Sunday June 17th 2018</p>
+        <p>This will be filled out later.</p>
+        <h3>Blog Post title goes here</h3>
+        <p class="date">Sunday June 17th 2018</p>
+        <p>This will be filled out later.</p>
+      </div>
+
+      <div class="col-3 homepage_content">
+        <h2>Latest Projects</h2>
+        <hr>
+        <h3><a href="#">Where To?</a></h3>
+        <p class="date">Sunday June 17th 2018</p>
+        <p>This will be filled out later.</p>
+        <h3><a href="#">Run into Paintings</a></h3>
+        <p class="date">Sunday June 17th 2018</p>
+        <p>This will be filled out later.</p>
+        <h3><a href="#">Koo</a></h3>
+        <p class="date">Sunday June 17th 2018</p>
+        <p>This will be filled out later.</p>
+      </div>
+    </div>
+
+
+    <footer id="main_footer">
+      <p class="copyright">&copy; 2018 John Bertlik</p>
+      <nav>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-soundcloud"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </nav>
+    </footer>
+
+    ......
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
