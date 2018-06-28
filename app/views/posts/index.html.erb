@@ -1,12 +1,18 @@
 <div class="wrapper wrapper_padding clearfix">
-  <div class="col-1 about homepage_content">
-    <h2>About</h2>
-    <hr>
-    <p>I'm a guy making a website right now.</p>
-    <p>This will be filled out later. Here is a<a href="#">product</a>I've been working on.</p>
-  </div>
+  
 
-  <div class="col-2 homepage_content">
+<%= @posts.each do |post| %>
+  <div class="post_wrapper">
+    <h2 class="title">
+      <%= link_to post.title, post %>
+    </h2>
+    <p class="date">
+      <%= post.created_at.strftime("%B, %d, %y") %>
+    </p>
+  </div>
+<% end %>
+
+  <!-- <div class="col-2 homepage_content">
     <h2>Latest Blog Post</h2>
     <hr>
     <h3>Blog Post title goes here</h3>
@@ -32,5 +38,5 @@
     <h3><a href="#">Koo</a></h3>
     <p class="date">Sunday June 17th 2018</p>
     <p>This will be filled out later.</p>
-  </div>
+  </div> -->
 </div>

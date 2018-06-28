@@ -4,16 +4,28 @@
     <title>John Bertlik - Web Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <header is="main-navigation" class="clearfix">
-      <a href="#" class="name">John Bertlik</a>
+    <header id="main-navigation" class="clearfix">
+      <!-- <a href="#" class="name">John Bertlik</a> -->
 
-      <nav>
+      <!-- <nav>
         <a href="#">About</a>
         <a href="#">Blog</a>
         <a href="#">Projects</a>
         <a href="#">Interests</a>
         <a href="#">Contact</a>
-      </nav>
+      </nav> -->
+
+    <nav>
+      <ul class="links">
+        <li class="links"><%= link_to "Home" %></li>
+        <li class="links"><%= link_to "About",  %></li>
+        <li class="links"><%= link_to "Blog", posts_path %></li>
+        <li class="links"><%= link_to "Projects" %></li>
+        <li class="links"><%= link_to "Interests" %></li>
+        <li class="links"><%= link_to "Contact" %></li>
+      </ul>
+    </nav>
+  <p class="sign_in">Admin Login</p>
     </header>
 
     <%= csrf_meta_tags %>
@@ -24,15 +36,16 @@
   </head>
 
   <body>
-    
+
     <%= yield %>
 
     <footer id="main_footer">
       <p class="copyright">&copy; 2018 John Bertlik</p>
       <nav>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-soundcloud"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://github.com/JBert9000"><i class="fab fa-github"></i></a>
+        <a href="https://soundcloud.com/chiibu"><i class="fab fa-soundcloud"></i></a>
+        <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+        <a href="https://www.linkedin.com/in/john-bertlik-59b4b95b/"><i class="fab fa-linkedin"></i></a>
       </nav>
     </footer>
   </body>

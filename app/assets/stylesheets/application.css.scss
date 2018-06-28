@@ -14,7 +14,7 @@
  *= require_self
  */
 
-@import 'normalize'
+@import 'normalize';
 
 $dark: #424652;
 $light: #9a9de4;
@@ -98,18 +98,29 @@ p, ul, ol {
     text-decoration: none;
     color: $dark;
     float: left;
+    &:hover {
+      color: $highlight;
+    }
   }
   nav {
     float: right;
     padding-top: 1.5rem;
+  } li {
+    display: inline;
+    &:hover {
+      color: $highlight;
+    }
   }
 }
 
 a {
-  color: $dark;
+  color: $light;
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1 rem;
+  &:hover {
+    color: $highlight;
+  }
 }
 
 #main_footer {
@@ -120,9 +131,10 @@ a {
     font-size: .9em;
     margin: 0;
   }
+
   nav {
     float: right;
-    i {
+    li {
       color: $dark;
       margin-left: 1em;
       padding-top: .2em;
