@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+
+  root 'pages#show', page: "home"
+
   resources :posts
 
-  resources :static only: [:home, :about, :projects, :interests]
+  get "/pages/:page" => "pages#show"
+
+
+  # resources :static only: [:home, :about, :projects, :interests]
 
 end
