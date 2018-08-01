@@ -25,7 +25,7 @@
         <li class="links"><%= link_to "Contact", "/pages/contact"  %></li>
       </ul>
     </nav>
-  <p class="sign_in">Admin Login</p>
+
     </header>
 
     <%= csrf_meta_tags %>
@@ -41,11 +41,16 @@
 
     <footer id="main_footer">
       <p class="copyright">&copy; 2018 John Bertlik</p>
+
       <nav>
         <a href="https://github.com/JBert9000"><i class="fab fa-github"></i></a>
         <a href="https://soundcloud.com/chiibu"><i class="fab fa-soundcloud"></i></a>
         <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
         <a href="https://www.linkedin.com/in/john-bertlik-59b4b95b/"><i class="fab fa-linkedin"></i></a>
+        <a href="<%= new_session_path %>">
+          <i class="fas fa-key"></i>
+        </a>
+
       </nav>
     </footer>
   </body>

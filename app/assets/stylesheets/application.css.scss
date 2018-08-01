@@ -141,6 +141,8 @@ a {
       padding-top: .2em;
       &:hover {
         color: $highlight;
+      } .sign_in {
+        color: $border;
       }
     }
   }

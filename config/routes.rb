@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'pages#show', page: "home"
+  resource :user, only: [:new, :create]
+  resource :session, only: %i[new create destroy]
 
   resources :posts
 
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
 
   get "/projects/:project" => "projects#show"
 
-
+  root 'pages#show', page: "home"
 
   # resources :static only: [:home, :about, :projects, :interests]
 
