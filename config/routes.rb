@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resource :user, only: [:new, :create]
   resource :session, only: %i[new create destroy]
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   get "/pages/:page" => "pages#show"
 
