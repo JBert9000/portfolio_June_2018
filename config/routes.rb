@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get "/interests/" => "interests#index"
+  get "/interests/:interest" => "interests#show"
+
   get "/pages/:page" => "pages#show"
 
   get "/projects" => "projects#index"
