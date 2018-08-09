@@ -1,24 +1,3 @@
-# README
+Hello! This is my personal portfolio Rails app. I wanted to include some of my interests, a blog of my progress into web development, and a little bit more about me.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Currently it is a work in progress, but I am excited to share this with you.
