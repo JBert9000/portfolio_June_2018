@@ -1,7 +1,8 @@
 <div class="wrapper wrapper_padding clearfix">
-  
 
-<%= @posts.each do |post| %>
+
+
+<% @posts.each do |post| %>
   <div class="post_wrapper">
     <h2 class="title">
       <%= link_to post.title, post %>
@@ -10,6 +11,13 @@
       <%= post.created_at.strftime("%B, %d, %y") %>
     </p>
   </div>
+<% end %>
+
+<% if admin_signed_in? %>
+<div class="buttons">
+  <br>
+  <%= link_to '<button type="button">New Post</button>'.html_safe, new_post_path %>
+</div>
 <% end %>
 
   <!-- <div class="col-2 homepage_content">

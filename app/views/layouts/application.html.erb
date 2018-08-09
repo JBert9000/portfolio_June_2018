@@ -5,18 +5,15 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <header id="main-navigation" class="clearfix">
-      <!-- <a href="#" class="name">John Bertlik</a> -->
 
-      <!-- <nav>
-        <a href="#">About</a>
-        <a href="#">Blog</a>
-        <a href="#">Projects</a>
-        <a href="#">Interests</a>
-        <a href="#">Contact</a>
-      </nav> -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
     <nav>
       <ul class="links">
+        <% if admin_signed_in? %>
+          <li class="links"><%= link_to 'Logout', destroy_admin_session_path, method: :delete %></li>
+        <% end %>
         <li class="links"><%= link_to "Home", root_path %></li>
         <li class="links"><%= link_to "About", "/pages/about" %></li>
         <li class="links"><%= link_to "Blog", posts_path %></li>
@@ -25,6 +22,12 @@
         <li class="links"><%= link_to "Contact", "/pages/contact"  %></li>
       </ul>
     </nav>
+
+    <% if current_page?("/posts/#{params[:id]}") %>
+      <h2>
+      <%= link_to "All Posts", posts_path %>
+      </h2>
+    <% end %>
 
     </header>
 
@@ -40,7 +43,7 @@
     <div class="post_content">
       <%= yield %>
     </div>
-    
+
     <footer id="main_footer">
       <p class="copyright">&copy; 2018 John Bertlik</p>
 
@@ -49,9 +52,11 @@
         <a href="https://soundcloud.com/chiibu"><i class="fab fa-soundcloud"></i></a>
         <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
         <a href="https://www.linkedin.com/in/john-bertlik-59b4b95b/"><i class="fab fa-linkedin"></i></a>
-        <a href="<%= new_session_path %>">
+        <% if !admin_signed_in? %>
+        <a href="<%= new_admin_session_path %>">
           <i class="fas fa-key"></i>
         </a>
+        <% end %>
 
       </nav>
     </footer>

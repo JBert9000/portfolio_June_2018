@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+protect_from_forgery
+before_action :authenticate_admin!
+
   def new
     @user = User.new
   end
