@@ -1,23 +1,23 @@
 
 
 <h1 class="title">
-  <%= @post.title %>
+  <i><u><%= @post.title %></u></i>
 </h1>
 
-<h1 class="date">
+<h5 class="date">
   Submitted <%= time_ago_in_words(@post.created_at) %> ago
   <% if admin_signed_in? %>
   | <%= link_to 'edit', edit_post_path(@post) %>
   | <%= link_to 'delete', post_path(@post), :method => :delete, data: { confirm: "Are you sure you want to delete this post?" } %>
   <% end %>
-</h1>
+</h5>
 
 <p class="body">
   <%= @post.body %>
 </p>
 
 <div id="comments">
-  <h2><%= @post.comments.count %> comments </h2>
+  <h4><%= @post.comments.count %> comments </h4>
   <%= render @post.comments %>
 
   <h3>Add a comment</h3>

@@ -23,13 +23,15 @@
       </ul>
     </nav>
 
-    <% if current_page?("/posts/#{params[:id]}") %>
-      <h2>
-      <%= link_to "All Posts", posts_path %>
-      </h2>
-    <% end %>
+
 
     </header>
+
+    <% if current_page?("/posts/#{params[:id]}") %>
+    <h4 class="font-color-change">
+      <%= link_to "All Posts", posts_path, class: "font-color-change" %>
+    </h4>
+    <% end %>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

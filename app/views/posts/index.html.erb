@@ -4,12 +4,12 @@
 
 <% @posts.each do |post| %>
   <div class="post_wrapper">
-    <h2 class="title">
-      <%= link_to post.title, post %>
+    <h2 class="font-color-change">
+      <%= link_to post.title, post, style: "color:magenta" %>
     </h2>
-    <p class="date">
+    <h2 class="date">
       <%= post.created_at.strftime("%B, %d, %y") %>
-    </p>
+    </h2>
   </div>
 <% end %>
 
@@ -20,31 +20,4 @@
 </div>
 <% end %>
 
-  <!-- <div class="col-2 homepage_content">
-    <h2>Latest Blog Post</h2>
-    <hr>
-    <h3>Blog Post title goes here</h3>
-    <p class="date">Sunday June 17th 2018</p>
-    <p>This will be filled out later.</p>
-    <h3>Blog Post title goes here</h3>
-    <p class="date">Sunday June 17th 2018</p>
-    <p>This will be filled out later.</p>
-    <h3>Blog Post title goes here</h3>
-    <p class="date">Sunday June 17th 2018</p>
-    <p>This will be filled out later.</p>
-  </div>
-
-  <div class="col-3 homepage_content">
-    <h2>Latest Projects</h2>
-    <hr>
-    <h3><a href="#">Where To?</a></h3>
-    <p class="date">Sunday June 17th 2018</p>
-    <p>This will be filled out later.</p>
-    <h3><a href="#">Run into Paintings</a></h3>
-    <p class="date">Sunday June 17th 2018</p>
-    <p>This will be filled out later.</p>
-    <h3><a href="#">Koo</a></h3>
-    <p class="date">Sunday June 17th 2018</p>
-    <p>This will be filled out later.</p>
-  </div> -->
 </div>

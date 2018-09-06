@@ -17,9 +17,35 @@
 @import 'normalize';
 
 $dark: #424652;
-$light: #9a9de4;
-$highlight: #Bcd6db;
+$light: #3df2ff;
+$highlight: #3dff98;
 $border: #E9E9E9;
+
+
+
+html{
+    width:100%;
+    height:100%;
+}
+body {
+    background:
+        linear-gradient(
+            45deg,
+            cyan,
+            rgba(255,255,255,0)
+        ),
+        linear-gradient(
+            -45deg,
+            magenta,
+            rgba(255,255,255,0)
+        );
+
+    background-blend-mode: screen;
+}
+
+.font-color-change {
+  color: magenta;
+}
 
 * {
   box-sizing: border-box;
