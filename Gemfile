@@ -64,3 +64,16 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added GEMS
+
+gem 'bootstrap', '~> 4.1.3'
+
+gem "rb-fsevent"
+
+gem 'webpacker', '~> 3.5'
+gem 'react-rails'
+
+
+gem 'optimist', '~> 3.0'
+gem 'trollop', '~> 2.9', '>= 2.9.9'
