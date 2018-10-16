@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :lifts
+
   devise_for :admins
   devise_for :models
 
