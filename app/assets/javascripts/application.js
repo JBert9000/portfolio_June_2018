@@ -13,6 +13,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require flappyBird
-//= require japanTrip
 //= require bootstrap-sprockets
+//= require material

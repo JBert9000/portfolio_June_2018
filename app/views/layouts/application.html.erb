@@ -4,6 +4,11 @@
     <title>John Bertlik - Web Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="material.css">
+    <script src="material.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <header id="main-navigation" class="clearfix">
 
       <p class="notice"><%= notice %></p>
@@ -46,6 +51,8 @@
       <%= yield %>
     </div>
 
+
+
     <footer id="main_footer">
       <p class="copyright">&copy; 2018 John Bertlik</p>
 
@@ -63,4 +70,9 @@
       </nav>
     </footer>
   </body>
+  <script>
+      document.addEventListener('turbolinks:load', function() {
+        componentHandler.upgradeDom();
+      });
+  </script>
 </html>

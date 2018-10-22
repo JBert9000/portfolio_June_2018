@@ -73,6 +73,8 @@ gem "rb-fsevent"
 
 gem 'webpacker', '~> 3.5'
 gem 'react-rails'
+gem 'material_design_lite-sass'
+
 
 
 gem 'optimist', '~> 3.0'

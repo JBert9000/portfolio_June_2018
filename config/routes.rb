@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-
   devise_for :admins
   devise_for :models
+
+  namespace :api do
+    namespace :v1 do
+      resources :fruits, only: [:index, :create, :destory, :update]
+    end
+  end
 
   # resource :user, only: [:new, :create]
   # resource :session, only: %i[new create destroy]
