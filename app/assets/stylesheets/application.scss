@@ -20,9 +20,11 @@
 @import 'material';
 
 $dark: #424652;
-$light: #3df2ff;
-$highlight: #3dff98;
+$darkgrey: #403E3E;
+$light: #E5E0DF;
+$highlight: #FF554A;
 $border: #E9E9E9;
+$yellow: #FFB713;
 
 
 
@@ -31,23 +33,26 @@ html{
     height:100%;
 }
 body {
-    background:
-        linear-gradient(
-            45deg,
-            cyan,
-            rgba(255,255,255,0)
-        ),
-        linear-gradient(
-            -45deg,
-            magenta,
-            rgba(255,255,255,0)
-        );
+    // background:
+    //     linear-gradient(
+    //         95deg,
+    //         cyan,
+    //         rgba(255,255,255,0)
+    //     ),
+    //     linear-gradient(
+    //         -95deg,
+    //         magenta,
+    //         rgba(255,255,255,0)
+    //     );
+
+    background-color: $darkgrey;
 
     background-blend-mode: screen;
+
 }
 
 .font-color-change {
-  color: magenta;
+  color: $highlight;
 }
 
 * {
@@ -57,6 +62,8 @@ body {
 body {
   font-family: 'Raleway', sans-serif;
 }
+
+
 
 .wrapper {
   width: 90%;
@@ -77,12 +84,13 @@ body {
   clear: both;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
-  color: $dark;
+h2, h3, h4, h5, h6, p, ul, li {
+  color: $light;
 }
 
 h1 {
   font-size: 2.5rem;
+  color: $highlight;
 }
 
 h2 {
@@ -143,7 +151,7 @@ p, ul, ol {
 }
 
 a {
-  color: $light;
+  color: $yellow;
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1 rem;

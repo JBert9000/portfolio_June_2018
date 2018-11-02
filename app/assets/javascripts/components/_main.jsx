@@ -1,3 +1,7 @@
+var ReactTransitionGroup = React.addons.ReactTransitionGroup
+
+
+
 const Main = (props) => {
   return(
     <div>
