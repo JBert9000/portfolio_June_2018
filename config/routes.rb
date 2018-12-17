@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   root 'pages#show', page: "home"
 
+  resources :nintendo_characters, only: [:index, :show, :update]
+
   # resources :static only: [:home, :about, :projects, :interests]
 
 end

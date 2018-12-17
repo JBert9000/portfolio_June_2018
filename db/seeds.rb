@@ -9,3 +9,11 @@
 fruits = ['Mango', 'Pineapple', 'Passion fruit', 'Dragonfruit']
 
 fruits.each {|fruit| Fruit.create(name: fruit, description: "I am a delicious #{fruit}.")}
+
+randomFirstNames = ['Mario', 'Luigi', 'Peach', 'Bowser', 'Waluigi', 'Wario', 'Yoshi', 'Toad', 'Pirana Plant', 'Big Bill', 'Donkey Kong', 'Diddy Kong', 'Link', 'Zelda', 'Ganondorf']
+
+randomLastNames = ['Bros.', '- a Link to the Past', 'Country', 'World', 'Island', '- Orcarina of Time', 'Land', 'Party', 'Tennis', 'Golf', 'Red Version']
+
+100.times {
+  NintendoCharacter.create({first_name: randomFirstNames.sample, last_name: randomLastNames.sample, age: rand(1..100)})
+}

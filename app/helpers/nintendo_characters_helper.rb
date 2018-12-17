@@ -1,0 +1,2 @@
+module NintendoCharactersHelper
+end

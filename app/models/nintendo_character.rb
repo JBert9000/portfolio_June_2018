@@ -1,0 +1,2 @@
+class NintendoCharacter < ApplicationRecord
+end
